@@ -153,7 +153,7 @@ $.fn.magicSlider = function(settings) {
 
     // If we need a dynamic menu
     if (settings.dynamicTabs) {
-      var dynamicTabs = '<div class="magic-nav" id="magic-nav-' + sliderCount + '"><ul></ul></div>';
+      var dynamicTabs = '<div class="magic-nav" id="magic-nav-' + sliderCount + '"><ul></ul></div><div class="clearfix"></div>';
       switch (settings.dynamicTabsPosition) {
         case "bottom":
           slider.parent().append(dynamicTabs);
@@ -165,7 +165,12 @@ $.fn.magicSlider = function(settings) {
       ul = $('#magic-nav-' + sliderCount + ' ul');
       // Create the nav items
       $('.panel', slider).each(function(n) {
-        ul.append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + $(this).find(settings.panelTitleSelector).text() + '</a></li>');                       
+		if ( $(this).find(settings.panelTitleSelector).length > 0 ) {
+			ul.append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + $(this).find(settings.panelTitleSelector).text() + '</a></li>');
+		} else {
+			ul.append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + (n+1) + '</a></li>');
+		}
+                               
       });
       navContainerWidth = slider.width() + slider.siblings('.magic-nav-left').width() + slider.siblings('.magic-nav-right').width();
       ul.parent().css({ width: navContainerWidth });
