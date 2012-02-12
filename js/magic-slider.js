@@ -197,7 +197,7 @@ $.fn.magicSlider = function(settings) {
     // External triggers (anywhere on the page)
     $(settings.externalTriggerSelector).each(function() {
       // Make sure this only affects the targeted slider
-      if (sliderCount == parseInt($(this).attr("rel").slice(12))) {
+      if (sliderCount == parseInt($(this).attr("rel").slice(13))) {
         $(this).bind("click", function() {
           navClicks++;
           targetPanel = parseInt($(this).attr("href").slice(1));
