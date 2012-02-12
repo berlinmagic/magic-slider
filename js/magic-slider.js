@@ -1,8 +1,14 @@
 /*
-  magic-slider
-  based on jQuery moutardeSlider / Coda-Slider v2.0 / Coda-Slider v2.1
-  (based on jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider)
+  magic-slider ... Version 0.1.0
+  https://github.com/orangenwerk/magic-slider   /   http://orangenwerk.github.com/magic-slider/
+  **************************************************************************************************
+  based on jQuery Coda-Slider v2.0 / Coda-Slider v2.1 / moutardeSlider
+  Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider
+  Coda-Slider v2.1 - https://github.com/jgillman/Coda-Slider-2.1
+  moutardeSlider - https://github.com/fstephany/moutardeSlider
   MIT license.
+  **************************************************************************************************
+  improvenments by Austin Strange
 */
 
 var sliderCount = 1;
