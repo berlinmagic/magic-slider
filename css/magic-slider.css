@@ -4,6 +4,20 @@
   MIT license.
 */
 
+a.xtrig { text-decoration:none; display:inline-block; padding: 0 10px; border: inset 1px #ccc; background: #f3f2f2;
+	-webkit-border-radius:    20px; 
+    -moz-border-radius:       20px; 
+    -o-border-radius:         20px; 
+    -ms-border-radius:        20px;
+    border-radius:            20px;
+	-o-box-shadow:       inset 1px 1px 1px 0 #000;
+    -webkit-box-shadow:  inset 1px 1px 1px 0 #000;
+    -moz-box-shadow:     inset 1px 1px 1px 0 #000;
+    -ms-box-shadow:      inset 1px 1px 1px 0 #000;
+    -khtml-box-shadow:   inset 1px 1px 1px 0 #000;
+    box-shadow:          inset 1px 1px 1px 0 #000;
+}
+
 .magic-slider-wrapper { 
   padding: 0;
 }

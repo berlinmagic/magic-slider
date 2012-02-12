@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Magic-Slider .. vertical and endless Coda-Slider</title>
+	<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta name="author" content="Austin Strange" />
+	
+	<link rel="stylesheet" href="css/boiler_first.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/magic-slider.css">
+	<link rel="stylesheet" href="css/boiler_last.css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	
+	<script type="text/javascript" src="js/magic-slider.js"></script>
+
+	<script type="text/javascript">
+			$().ready(function() {
+				$('#magic-slider-1').magicSlider();
+			});
+	</script>
+</head>
+
+<body class="coda-slider-no-js">
+
+<div id="main-content">
+	
+
+	<h1 class="site_title">magic-slider</h1>
+	<div id="main_nav">
+		<a href="./">Examples</a>
+		<a href="./desc.html" class="active">Description</a>
+	</div>
+
+	<hr/>
+	
+	<div class="magic-slider-wrapper desc_wrapper">
+		<div class="magic-slider preload" id="magic-slider-1">
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Important Settings</h2>
+					<table class="desc">
+						<thead>
+							<tr>
+								<th>Option</th>
+								<td>default</td>
+								<td>Description</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="even">
+								<th>slideDirection</th>
+								<td>horizontal</td>
+								<td>The Slide-Direction "horizontal" / "vertical"</td>
+							</tr>
+							<tr class="odd">
+								<th>carousel</th>
+								<td>false</td>
+								<td>Carousel = Invinite-Scroll .. (Don't slide Back to first Panel when hit the end)</td>
+							</tr>
+							<tr class="even">
+								<th>crossLinking</th>
+								<td>false</td>
+								<td>Change URL and linkable Panels .. (Turned off, because I don't like Anchors)</td>
+							</tr>
+							<tr class="odd">
+								<th>autoCycle</th>
+								<td>false</td>
+								<td>Endless Play</td>
+							</tr>
+							<tr class="even">
+								<th>autoSlide</th>
+								<td>false</td>
+								<td>Slider changes automatic = Autoplay</td>
+							</tr>
+							<tr class="odd">
+								<th>autoSlideStopWhenClicked</th>
+								<td>true</td>
+								<td>Stop Autoplay when Link is clicked</td>
+							</tr>
+							<tr class="even">
+								<th>firstPanelToLoad</th>
+								<td>1</td>
+								<td>Start-Panel of the given Slider</td>
+							</tr>
+							<tr class="odd">
+								<th>externalTriggerSelector</th>
+								<td>a.xtrig</td>
+								<td>Selector for external-Link = &lt;a class="xtrig" href="#1" rel="magic-slider-1"&gt;text&lt;/a&gt;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Slider Effekts</h2>
+					<table class="desc">
+						<thead>
+							<tr>
+								<th>Option</th>
+								<td>default</td>
+								<td>Description</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="even">
+								<th>autoHeight</th>
+								<td>true</td>
+								<td>Change the Panel Height for each Panel</td>
+							</tr>
+							<tr class="odd">
+								<th>autoHeightEaseDuration</th>
+								<td>1000</td>
+								<td>Time to animate the Height-Transition .. (in miliseconds)</td>
+							</tr>
+							<tr class="even">
+								<th>autoHeightEaseFunction</th>
+								<td>easeInOutExpo</td>
+								<td>Height-Transition-Effekt</td>
+							</tr>
+							
+							<tr class="odd">
+								<th>autoSlideInterval</th>
+								<td>7000</td>
+								<td>Autoplay Stay-Time</td>
+							</tr>
+							
+							<tr class="even">
+								<th>slideEaseDuration</th>
+								<td>1000</td>
+								<td>Slide-Time .. (in miliseconds)</td>
+							</tr>
+							
+							<tr class="odd">
+								<th>slideEaseFunction</th>
+								<td>easeInOutExpo</td>
+								<td>Height-Transition-Effekt</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Automatic Navigation</h2>
+					<table class="desc">
+						<thead>
+							<tr>
+								<th>Option</th>
+								<td>default</td>
+								<td>Description</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="even">
+								<th>dynamicArrows</th>
+								<td>true</td>
+								<td>Generate dynamic (left/right) arrows</td>
+							</tr>
+							<tr class="odd">
+								<th>dynamicArrowLeftText</th>
+								<td>&#171;</td>
+								<td>Linktext of the left-arrow</td>
+							</tr>
+							<tr class="even">
+								<th>dynamicArrows</th>
+								<td>&#187;</td>
+								<td>Linktext of the right-arrow</td>
+							</tr>
+							<tr class="odd">
+								<th>dynamicTabs</th>
+								<td>true</td>
+								<td>Generate dynamic Tab-Navigation</td>
+							</tr>
+							
+							<tr class="even">
+								<th>dynamicTabsAlign</th>
+								<td>center</td>
+								<td>Vertical-Position of the Tab-Navigation</td>
+							</tr>
+							<tr class="odd">
+								<th>dynamicTabsPosition</th>
+								<td>top</td>
+								<td>Horizontal-Position of the Tab-Navigation</td>
+							</tr>
+							
+							<tr class="even">
+								<th>panelTitleSelector</th>
+								<td>h2.title</td>
+								<td>TitleSelector = Content is used to fill Tab-Navigation-Links</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>	<!-- end of:  magic-slider  -->
+	</div>		<!-- end of:  magic-slider-wrapper  -->
+
+
+	
+	<br/>
+	<hr/>
+	<p class="copy">
+		&copy; 2012 by Austin Strange<br/>
+		<strong>magic-slider 0.1.0</strong> ... a jQuery-Content-Slider, based on Coda-Slider and moutardeSlider.
+	</p>
+
+</div>
+
+</body>
+</html>
