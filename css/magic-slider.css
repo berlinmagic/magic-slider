@@ -1,0 +1,135 @@
+/*
+  jQuery magicSlider 
+  (based on jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider)
+  MIT license.
+*/
+
+.magic-slider-wrapper { 
+  padding: 0;
+}
+
+.magic-slider {
+  background: #f3f2f2;
+}
+
+/* Use this to keep the slider content contained in a box 
+   even when JavaScript is disabled */
+.magic-slider-no-js .magic-slider { 
+  height: 560px; 
+  overflow: auto 
+  !important; padding-right: 
+  0px
+}
+
+/* Change the width of the entire slider (without dynamic arrows) */
+.magic-slider, 
+.magic-slider .panel {
+  width: 880px
+} 
+
+/* Change margin and width of the slider (with dynamic arrows) */
+.magic-slider-wrapper.arrows .magic-slider,
+.magic-slider-wrapper.arrows .magic-slider .panel {
+  width: 880px
+}
+
+.magic-slider-wrapper.arrows .magic-slider { 
+  margin: 0 10px 
+}
+
+/* Arrow styling */
+.magic-nav-left a, 
+.magic-nav-right a {
+	margin-top: 50px; 
+	background: #000; 
+	color: #fff; 
+	padding: 5px; 
+	width: 20px;
+	height: 20px;
+	font-size: 20px; line-height: 20px;
+	-webkit-border-radius:    20px; 
+    -moz-border-radius:       20px; 
+    -o-border-radius:         20px; 
+    -ms-border-radius:        20px;
+    border-radius:            20px;
+}
+
+/* Tab nav */
+.magic-nav ul li a.current { 
+  background: #000000; 
+}
+
+/* Panel padding */
+.magic-slider .panel-wrapper {
+  padding: 20px 
+}
+
+/* Preloader */
+.magic-slider p.loading {
+  padding: 20px; text-align: center 
+}
+
+/* Tabbed nav */
+.magic-nav { margin: 0; padding: 0; }
+.magic-nav ul {
+  	clear: both;
+  	display: block;
+  	margin: 0 auto;
+  	overflow: hidden;
+	padding: 0;
+}
+
+.magic-nav ul li { 
+	vertical-align: bottom;
+	display: inline-block;
+	margin: 0 1px;
+	padding: 0;
+}
+
+.magic-nav ul li a { 
+	-webkit-border-radius:    5px 5px 0 0; 
+    -moz-border-radius:       5px 5px 0 0; 
+    -o-border-radius:         5px 5px 0 0; 
+    -ms-border-radius:        5px 5px 0 0;
+    border-radius:            5px 5px 0 0;
+  background: #999999;
+  color: #fff;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 5px 10px;
+  text-decoration: none
+}
+
+/* Miscellaneous */
+.magic-slider-wrapper {
+  clear: both; 
+  overflow: auto
+}
+
+.magic-slider { 
+  float: left;
+  overflow: hidden;
+  position: relative
+}
+
+.magic-slider .panel {
+  display: block;
+  float: left;
+  padding: 0;
+}
+
+.magic-slider .panel-container { 
+  position: relative
+}
+.magic-nav-left,
+.magic-nav-right {
+  float: left
+}
+
+.magic-nav-left a,
+.magic-nav-right a {
+  display: block;
+  text-align: center;
+  text-decoration: none
+}  
