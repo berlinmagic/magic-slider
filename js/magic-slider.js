@@ -176,7 +176,7 @@ $.fn.magicSlider = function(settings) {
       ul.parent().css({ width: navContainerWidth });
       switch (settings.dynamicTabsAlign) {
         case "center":
-          ul.css({ width: ($("li", ul).width() + 10) * panelCount });
+          ul.css({ width: ($("li", ul).width() + 2) * panelCount });
           break;
         case "right":
           ul.css({ float: 'right' });
@@ -193,6 +193,7 @@ $.fn.magicSlider = function(settings) {
         navClicks++;
         alterPanelHeight(z);
         moveToPanel(z + 1)
+		currentPanel = z + 1;
         if (!settings.crossLinking) { return false }; // Don't change the URL hash unless cross-linking is specified
       });
     });
