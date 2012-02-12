@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Magic-Slider .. vertical and endless Coda-Slider</title>
+	<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta name="author" content="Austin Strange" />
+	
+	<link rel="stylesheet" href="css/boiler_first.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/magic-slider.css">
+	<link rel="stylesheet" href="css/boiler_last.css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	
+	<script type="text/javascript" src="js/magic-slider.js"></script>
+
+	<script type="text/javascript">
+			$().ready(function() {
+				$('#magic-slider-1').magicSlider();
+				$('#magic-slider-2').magicSlider({ autoHeight: true, carousel: true, slideDirection: "vertical" });
+				$('#magic-slider-3').magicSlider({ autoHeight: false, carousel: false, slideDirection: "vertical" });
+				$('#magic-slider-4').magicSlider({ autoHeight: false, carousel: true, slideDirection: "horizontal" });
+			});
+	</script>
+</head>
+
+<body class="coda-slider-no-js">
+
+<div id="main-content">
+	
+
+	<h1 class="site_title">magic-slider</h1>
+
+
+	<hr/>
+	<p><strong>default</strong> Settings</p>
+
+	
+	<div class="magic-slider-wrapper">
+		<div class="magic-slider preload" id="magic-slider-1">
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 1</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+						pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
+						vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 2</h2>
+					<p>
+						Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, 
+						es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales 
+						Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu 
+						ziehen? Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, 
+						die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude 
+						nach sich zieht?
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 3</h2>
+					<p>
+						Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+						Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. 
+						Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. 
+						Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. 
+						Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches 
+						Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, 
+						hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, 
+						wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren.
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 4</h2>
+					<p>
+						Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht 
+						nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke 
+						erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein 
+						paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, 
+						mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller 
+						zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich.
+					</p>
+				</div>
+			</div>
+		</div>	<!-- end of:  magic-slider  -->
+	</div>		<!-- end of:  magic-slider-wrapper  -->
+
+
+
+
+	<hr/>
+	<p>autoHeight: <strong>true</strong>, carousel: <strong>true</strong>, slideDirection: <strong>"vertical"</strong></p>
+	
+	<div class="magic-slider-wrapper">
+		<div class="magic-slider preload" id="magic-slider-2">
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 1</h2>
+					<p>
+						Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht 
+						nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke 
+						erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein 
+						paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, 
+						mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller 
+						zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich.
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 2</h2>
+					<p>
+						Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, 
+						es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales 
+						Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu 
+						ziehen? Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, 
+						die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude 
+						nach sich zieht?
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 3</h2>
+					<p>
+						Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+						Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. 
+						Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. 
+						Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. 
+						Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches 
+						Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, 
+						hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, 
+						wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren.
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 4</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+						pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
+						vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+					</p>
+				</div>
+			</div>
+		</div>	<!-- end of:  magic-slider  -->
+	</div>		<!-- end of:  magic-slider-wrapper  -->
+	
+
+
+
+	<hr/>
+	<p>autoHeight: <strong>false</strong>, carousel: <strong>false</strong>, slideDirection: <strong>"vertical"</strong></p>
+	
+	<div class="magic-slider-wrapper">
+		<div class="magic-slider preload" id="magic-slider-3">
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 1</h2>
+					<p>
+						Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, 
+						es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales 
+						Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu 
+						ziehen? Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, 
+						die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude 
+						nach sich zieht?
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 2</h2>
+					<p>
+						Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht 
+						nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke 
+						erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein 
+						paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, 
+						mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller 
+						zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich.
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 3</h2>
+					<p>
+						Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+						Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. 
+						Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. 
+						Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. 
+						Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches 
+						Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, 
+						hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, 
+						wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren.
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 4</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+						pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
+						vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+					</p>
+				</div>
+			</div>
+		</div>	<!-- end of:  magic-slider  -->
+	</div>		<!-- end of:  magic-slider-wrapper  -->
+	
+
+
+	<hr/>
+	<p>autoHeight: <strong>false</strong>, carousel: <strong>true</strong>, slideDirection: <strong>"horizontal"</strong></p>
+	
+	<div class="magic-slider-wrapper">
+		<div class="magic-slider preload" id="magic-slider-4">
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 1</h2>
+					<p>
+						Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+						Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. 
+						Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. 
+						Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. 
+						Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches 
+						Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, 
+						hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, 
+						wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren.
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 2</h2>
+					<p>
+						Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, 
+						es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales 
+						Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu 
+						ziehen? Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, 
+						die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude 
+						nach sich zieht?
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 3</h2>
+					<p>
+						Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht 
+						nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke 
+						erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein 
+						paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, 
+						mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller 
+						zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich.
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-wrapper">
+					<h2 class="title">Panel 4</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+						pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
+						vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+					</p>
+				</div>
+			</div>
+		</div>	<!-- end of:  magic-slider  -->
+	</div>		<!-- end of:  magic-slider-wrapper  -->
+	
+
+
+</div>
+
+</body>
+</html>
