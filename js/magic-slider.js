@@ -12,7 +12,7 @@ $.fn.magicSlider = function(settings) {
   settings = $.extend({
     autoHeight: true,
     autoHeightEaseDuration: 1000,
-    autoHeightEaseFunction: "easeInOutExpo",
+    autoHeightEaseFunction: "swing",
     autoSlide: false,
     autoCycle: false,
     autoSlideInterval: 7000,
@@ -28,7 +28,7 @@ $.fn.magicSlider = function(settings) {
     firstPanelToLoad: 1,
     panelTitleSelector: "h2.title",
     slideEaseDuration: 1000,
-    slideEaseFunction: "easeInOutExpo",
+    slideEaseFunction: "swing",
 	slideDirection: "horizontal", // "horizontal" / "vertical"
 	carousel: false
   }, settings);
