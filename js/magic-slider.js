@@ -193,6 +193,7 @@ $.fn.magicSlider = function(settings) {
         navClicks++;
         alterPanelHeight(z);
         moveToPanel(z + 1)
+		currentPanel = z + 1;
         if (!settings.crossLinking) { return false }; // Don't change the URL hash unless cross-linking is specified
       });
     });
