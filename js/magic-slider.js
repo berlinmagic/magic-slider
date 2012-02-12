@@ -212,7 +212,7 @@ $.fn.magicSlider = function(settings) {
           // Switch the current tab:
           slider.siblings('.magic-nav').find('a').removeClass('current').parents('ul').find('li:eq(' + (targetPanel - 1) + ') a').addClass('current');
           // Slide
-          $('.panel-container', slider).animate({ marginLeft: offset }, settings.slideEaseDuration, settings.slideEaseFunction);
+          moveToPanel(currentPanel);
           if (!settings.crossLinking) { return false }; // Don't change the URL hash unless cross-linking is specified
         });
       };
