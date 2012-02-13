@@ -2,3 +2,8 @@
 
 
 h1.site_title { font-family: 'Righteous', cursive; font-weight: normal; font-size: 42px; color: #666; text-shadow: 1px 1px 1px #000;}
+
+
+#da_slider_head { padding: 10px 0; background: #333; color: #666; text-align: center; margin: 0 40px 20px; text-shadow: 1px 1px 1px #000;}
+
+.samplecode { margin: 10px 0; padding: 20px 50px; display:block; background: #fff;}
