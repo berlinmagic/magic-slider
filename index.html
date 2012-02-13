@@ -22,8 +22,16 @@
 	<script type="text/javascript">
 			$().ready(function() {
 				$('#magic-slider-1').magicSlider();
-				$('#magic-slider-2').magicSlider({ autoHeight: true, carousel: true, slideDirection: "vertical" });
-				$('#magic-slider-3').magicSlider({ autoHeight: false, carousel: false, slideDirection: "vertical" });
+				
+				$('#magic-slider-2').magicSlider({ 
+													autoHeight: true, 
+													carousel: true, 
+													slideDirection: "vertical",
+													changeSliderHeadline: true,
+													sliderHeadlineSelector: "#da_slider_head"
+													
+				});
+				$('#magic-slider-3').magicSlider({ autoHeight: false, dynamicTabsPosition: "count", slideDirection: "vertical" });
 				$('#magic-slider-4').magicSlider({ autoHeight: false, carousel: true, slideDirection: "horizontal" });
 			});
 	</script>
@@ -35,17 +43,13 @@
 	
 
 	<h1 class="site_title">magic-slider</h1>
-	<div id="main_nav">
-		<a href="./" class="active">Examples</a>
-		<a href="./desc.html">Description</a>
-		<a href="https://github.com/orangenwerk/magic-slider">Source</a>
-	</div>
+
 
 	<hr/>
 	<p>
 		<strong>default</strong> Settings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a class="xtrig" href="#1" rel="magic-slider-1">external Link 1</a> &nbsp;|&nbsp; 
-		<a class="xtrig" href="#3" rel="magic-slider-1">external Link 3</a>
+		<a class="xtrig" href="#2" rel="magic-slider-1">external Link [2]</a> &nbsp;|&nbsp; 
+		<a class="xtrig" href="#3" rel="magic-slider-1">external Link [3]</a>
 	</p>
 
 	
@@ -53,56 +57,61 @@
 		<div class="magic-slider preload" id="magic-slider-1">
 			<div class="panel">
 				<div class="panel-wrapper">
-					<h2 class="title">Panel 1</h2>
+					<h2 class="title hidden">magic-slider</h2>
+					<p>jQuery-Content-Slider based on Coda-Slider and moutardeSlider.</p>
+					<p><strong>improvements:</strong></p>
+					<ul>
+						<li><strong>vertical sliding</strong> ... wanna go up and down? .. magic-slider goes vertical or horizontal with or without autoHeight, your choice</li>
+						<li><strong>carousel-mode</strong> (invinite-sliding) ... no scroll-back to beginning if you don't want</li>
+						<li><strong>headline changer</strong> (for external Titles) ... need an outside Title for youre Slider, here you are! .. ( panelTitle needed! )</li>
+						<li><strong>numbered tabs</strong> ... use just numbers or panel-title for the tabs</li>
+						<li><strong>no panel-title needed</strong> ... if no panel-title is provided, panel-count is used for tabs</li>
+					</ul>
 					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-						pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-						vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+						magic-slider chould be fully compatible with coda-slider .. just include the js, change 'coda' to 'magic' in your 
+						HTML and CSS. Now everything chould work like before and you are ready to include the new features!
 					</p>
 				</div>
 			</div>
 			<div class="panel">
 				<div class="panel-wrapper">
-					<h2 class="title">Panel 2</h2>
-					<p>
-						Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, 
-						es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales 
-						Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu 
-						ziehen? Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, 
-						die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude 
-						nach sich zieht?
-					</p>
+					<h2 class="title hidden">code-sample</h2>
+					<code class="samplecode">
+						$().ready(function() {<br/>
+						&nbsp;&nbsp;&nbsp;$('#magic-slider-2').magicSlider({<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autoHeight: true, <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carousel: true, <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slideDirection: "vertical", <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;changeSliderHeadline: true, <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderHeadlineSelector: "#da_slider_head" <br/>
+						&nbsp;&nbsp;&nbsp;}); <br/>
+						});
+					</code>
+					<p>This is the code for the slider below.</p>
 				</div>
 			</div>
 			<div class="panel">
 				<div class="panel-wrapper">
-					<h2 class="title">Panel 3</h2>
+					<h2 class="title hidden">html-sample</h2>
+					<code class="samplecode">
+						&lt;div class="magic-slider-wrapper"&gt;<br/>
+						&nbsp;&nbsp;&lt;div class="magic-slider" id="magic-slider-1"&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="panel"&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="panel-wrapper"&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="title hidden"&gt;Panel 1&lt;/h2&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Your-Content.&lt;/p&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+						&nbsp;&nbsp;&lt;/div&gt;<br/>
+						&lt;/div&gt;<br/>
+					</code>
 					<p>
-						Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
-						Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. 
-						Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. 
-						Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. 
-						Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches 
-						Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, 
-						hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, 
-						wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren.
+						Sample with 1 Panel and hidden Panel-Titel .. this title isn't needed, but usefull if you want 
+						tab-links with text are change the slider-headline like below.
 					</p>
 				</div>
 			</div>
-			<div class="panel">
-				<div class="panel-wrapper">
-					<h2 class="title">Panel 4</h2>
-					<p>
-						Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht 
-						nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke 
-						erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein 
-						paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, 
-						mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller 
-						zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich.
-					</p>
-				</div>
-			</div>
+			
 		</div>	<!-- end of:  magic-slider  -->
 	</div>		<!-- end of:  magic-slider-wrapper  -->
 
@@ -110,7 +119,13 @@
 
 
 	<hr/>
-	<p>autoHeight: <strong>true</strong>, carousel: <strong>true</strong>, slideDirection: <strong>"vertical"</strong></p>
+	<p>
+		autoHeight: <strong>true</strong>, carousel: <strong>true</strong>, slideDirection: <strong>"vertical"</strong>, changeSliderHeadline: <strong>true</strong>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="xtrig" href="#2" rel="magic-slider-2">external Link [2]</a> &nbsp;|&nbsp; 
+		<a class="xtrig" href="#3" rel="magic-slider-2">external Link [3]</a>
+	</p>
+	<h2 id="da_slider_head">I should be changed be js!</h2>
 	
 	<div class="magic-slider-wrapper">
 		<div class="magic-slider preload" id="magic-slider-2">
@@ -174,10 +189,10 @@
 
 	<hr/>
 	<p>
-		autoHeight: <strong>false</strong>, carousel: <strong>false</strong>, slideDirection: <strong>"vertical"</strong>
+		autoHeight: <strong>false</strong>, dynamicTabsPosition: <strong>count</strong>, slideDirection: <strong>"vertical"</strong>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a class="xtrig" href="#1" rel="magic-slider-3">external Link 1</a> &nbsp;|&nbsp; 
-		<a class="xtrig" href="#3" rel="magic-slider-3">external Link 3</a>
+		<a class="xtrig" href="#2" rel="magic-slider-3">external Link [2]</a> &nbsp;|&nbsp; 
+		<a class="xtrig" href="#3" rel="magic-slider-3">external Link [3]</a>
 	</p>
 	
 	<div class="magic-slider-wrapper">
@@ -301,10 +316,7 @@
 	
 	<br/>
 	<hr/>
-	<p class="copy">
-		&copy; 2012 by Austin Strange<br/>
-		<strong>magic-slider 0.1.0</strong> ... a jQuery-Content-Slider, based on Coda-Slider and moutardeSlider.
-	</p>
+	<p class="copy">magic-slider a jquery-content-slider by Austin Strange, based on Coda-Slider and moutardeSlider.</p>
 
 </div>
 
