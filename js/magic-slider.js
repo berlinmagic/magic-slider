@@ -30,7 +30,7 @@ $.fn.magicSlider = function(settings) {
 		dynamicTabs: true,
 		dynamicTabsAlign: "center",
 		dynamicTabsPosition: "top",
-		dynamicTabsPosition: "title",		// "title" / "count"
+		dynamicTabsContent: "title",		// "title" / "count"
 		externalTriggerSelector: "a.xtrig",
 		firstPanelToLoad: 1,
 		panelTitleSelector: "h2.title",
@@ -194,7 +194,7 @@ $.fn.magicSlider = function(settings) {
 			
 			// Create the nav items
 			$('.panel', slider).each(function(n) {
-				if ( $(this).find(settings.panelTitleSelector).length > 0 && settings.dynamicTabsPosition == "title" ) {
+				if ( $(this).find(settings.panelTitleSelector).length > 0 && settings.dynamicTabsContent == "title" ) {
 					ul.append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + $(this).find(settings.panelTitleSelector).text() + '</a></li>');
 				} else {
 					ul.append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + (n+1) + '</a></li>');
