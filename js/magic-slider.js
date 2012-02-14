@@ -284,7 +284,7 @@ $.fn.magicSlider = function(settings) {
 		};
 
 		function moveToPanel(targetPanelIndex) {
-			var navList = slider.parents('div.magic-slider-wrapper').find('.magic-nav ul');
+			var navList = $('#magic-nav-' + sliderID + ' ul');
 			var currentLink = navList.find('li:eq(' + (targetPanelIndex - 1) + ') a');
 			navList.find('a').removeClass('current');
 			currentLink.addClass('current');
