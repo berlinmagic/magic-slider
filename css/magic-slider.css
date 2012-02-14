@@ -18,6 +18,8 @@ a.xtrig { text-decoration:none; display:inline-block; padding: 0 10px; border: i
     box-shadow:          inset 1px 1px 1px 0 #000;
 }
 
+a.xtrig.current { background: #ccc; color: #000; text-shadow: 1px 1px 1px #fff;}
+
 .magic-slider-wrapper { 
   padding: 0;
 }

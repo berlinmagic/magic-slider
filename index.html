@@ -28,6 +28,7 @@
 													carousel: true, 
 													slideDirection: "vertical",
 													changeSliderHeadline: true,
+													highlightExternalTrigger: true,
 													sliderHeadlineSelector: "#da_slider_head"
 													
 				});
@@ -52,6 +53,7 @@
 	<hr/>
 	<p>
 		<strong>default</strong> Settings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="xtrig" href="#1" rel="magic-slider-1">external Link [1]</a> &nbsp;|&nbsp; 
 		<a class="xtrig" href="#2" rel="magic-slider-1">external Link [2]</a> &nbsp;|&nbsp; 
 		<a class="xtrig" href="#3" rel="magic-slider-1">external Link [3]</a>
 	</p>
@@ -70,6 +72,8 @@
 						<li><strong>headline changer</strong> (for external Titles) ... need an outside Title for youre Slider, here you are! .. ( panelTitle needed! )</li>
 						<li><strong>numbered tabs</strong> ... use just numbers or panel-title for the tabs</li>
 						<li><strong>no panel-title needed</strong> ... if no panel-title is provided, panel-count is used for tabs</li>
+						<li><strong>external Trigger highlighting</strong> ... Now if you want the current externalTrigger is marked as current.</li>
+						<li><strong>slider in slider</strong> ... Now its possible to place a slider inside another slider! .. Also rel-linking is reworked.</li>
 					</ul>
 					<p>
 						magic-slider should be fully compatible with coda-slider .. just include the js, change 'coda' to 'magic' in your 
@@ -87,6 +91,7 @@
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carousel: true, <br/>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slideDirection: "vertical", <br/>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;changeSliderHeadline: true, <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;highlightExternalTrigger: true, <br/>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderHeadlineSelector: "#da_slider_head" <br/>
 						&nbsp;&nbsp;&nbsp;}); <br/>
 						});
@@ -97,6 +102,10 @@
 			<div class="panel">
 				<div class="panel-wrapper">
 					<h2 class="title hidden">html-sample</h2>
+					<p>
+						Sample with 1 Panel and hidden Panel-Titel .. this title isn't needed, but usefull if you want 
+						tab-links with text or if you want to change a slider-headline like below.
+					</p>
 					<code class="samplecode">
 						&lt;div class="magic-slider-wrapper"&gt;<br/>
 						&nbsp;&nbsp;&lt;div class="magic-slider" id="magic-slider-1"&gt;<br/>
@@ -109,10 +118,14 @@
 						&nbsp;&nbsp;&lt;/div&gt;<br/>
 						&lt;/div&gt;<br/>
 					</code>
-					<p>
-						Sample with 1 Panel and hidden Panel-Titel .. this title isn't needed, but usefull if you want 
-						tab-links with text or if you want to change a slider-headline like below.
-					</p>
+					<p><strong>also possible:</strong> ... ( the structure of coda-slider is not needed anymore .. only for styling )</p>
+					<code class="samplecode">
+						&lt;div id="slider_one"&gt;<br/>
+						&nbsp;&nbsp;&lt;div&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;Your-Content.<br/>
+						&nbsp;&nbsp;&lt;/div&gt;<br/>
+						&lt;/div&gt;<br/>
+					</code>
 				</div>
 			</div>
 			
@@ -124,8 +137,9 @@
 
 	<hr/>
 	<p>
-		autoHeight: <strong>true</strong>, carousel: <strong>true</strong>, slideDirection: <strong>"vertical"</strong>, changeSliderHeadline: <strong>true</strong>
+		<strong>some special settings</strong> .. look the code-sample
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="xtrig" href="#1" rel="magic-slider-2">external Link [1]</a> &nbsp;|&nbsp; 
 		<a class="xtrig" href="#2" rel="magic-slider-2">external Link [2]</a> &nbsp;|&nbsp; 
 		<a class="xtrig" href="#3" rel="magic-slider-2">external Link [3]</a>
 	</p>
@@ -135,54 +149,69 @@
 		<div class="magic-slider preload" id="magic-slider-2">
 			<div class="panel">
 				<div class="panel-wrapper">
-					<h2 class="title">Panel 1</h2>
+					<h2 class="title hidden">magic-slider</h2>
+					<p>jQuery-Content-Slider basierend auf Coda-Slider und moutardeSlider.</p>
+					<p><strong>Erweiterungen:</strong></p>
+					<ul>
+						<li><strong>vertikales sliding</strong> ... du willst auf und ab? .. magic-slider arbeitet sowohl vertikal als auch horizontal .. mit und ohne autoHeight!</li>
+						<li><strong>unendlicher Modus</strong> ... kein zurück-scroll beim letzten panel, wenn nicht gewünscht</li>
+						<li><strong>Überschrift wechseln</strong> ... du brauchst eine externe Überschrift, Bitte sehr! .. ( panelTitle benötigt! )</li>
+						<li><strong>nummerierte tabs</strong> ... Nummern oder Titel für die dynamischen Tabs?</li>
+						<li><strong>kein panel-title nötig</strong> ... wenn kein panelTitle wird für Tab-Links die Panel-nummer verwendet</li>
+						<li><strong>externe Links hervorheben</strong> ... Nun können auch externe Links als aktiv (current) gekennzeichnet werden.</li>
+						<li><strong>slider im slider</strong> ... Jetzt ist es möglich einen Slider in einem anderen Slider anzulegen! .. Auch rel-linking ist überarbeitet.</li>
+					</ul>
 					<p>
-						Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht 
-						nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke 
-						erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein 
-						paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, 
-						mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller 
-						zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich.
+						magic-slider soll voll kompatibel zum alten coda-slider sein .. einfach das script implementieren, in HTML und CSS 'coda' gegen 'magic' tauschen. 
+						Nun sollte alles wie bisher laufen und du kannst die neuen Funktionen testen / nutzen.
 					</p>
 				</div>
 			</div>
 			<div class="panel">
 				<div class="panel-wrapper">
-					<h2 class="title">Panel 2</h2>
-					<p>
-						Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, 
-						es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales 
-						Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu 
-						ziehen? Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, 
-						die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude 
-						nach sich zieht?
-					</p>
+					<h2 class="title hidden">code-beispiel</h2>
+					<code class="samplecode">
+						$().ready(function() {<br/>
+						&nbsp;&nbsp;&nbsp;$('#magic-slider-2').magicSlider({<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autoHeight: true, <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carousel: true, <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slideDirection: "vertical", <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;changeSliderHeadline: true, <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;highlightExternalTrigger: true, <br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sliderHeadlineSelector: "#da_slider_head" <br/>
+						&nbsp;&nbsp;&nbsp;}); <br/>
+						});
+					</code>
+					<p>Dies ist der Code für diesen Slider. .. mit den neuen Funktionen: changeSliderHeadline, highlightExternalTrigger</p>
 				</div>
 			</div>
 			<div class="panel">
 				<div class="panel-wrapper">
-					<h2 class="title">Panel 3</h2>
+					<h2 class="title hidden">html-beispiel</h2>
 					<p>
-						Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
-						Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. 
-						Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. 
-						Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. 
-						Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches 
-						Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, 
-						hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, 
-						wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren.
+						Beispiel mit einem Panel und verstecktem Panel-Titel .. dieser ist nicht erforderlich! .. Aber sehr nützlich, um Tab-Links mit Text aus zu statten, 
+						oder aber eine Überschrift zu wechseln! (in diesem Beispiel haben die Tabs Text und Überschrift ist aktiv drum nötig!)
 					</p>
-				</div>
-			</div>
-			<div class="panel">
-				<div class="panel-wrapper">
-					<h2 class="title">Panel 4</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-						pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-						vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-					</p>
+					<code class="samplecode">
+						&lt;div class="magic-slider-wrapper"&gt;<br/>
+						&nbsp;&nbsp;&lt;div class="magic-slider" id="magic-slider-1"&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="panel"&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="panel-wrapper"&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="title hidden"&gt;Panel 1&lt;/h2&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Your-Content.&lt;/p&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+						&nbsp;&nbsp;&lt;/div&gt;<br/>
+						&lt;/div&gt;<br/>
+					</code>
+					<p><strong>ebenso möglich:</strong> ... ( die alte struktur vom coda-slider ist nicht mehr erforderlich, höchstens fürs styling )</p>
+					<code class="samplecode">
+						&lt;div id="slider_one"&gt;<br/>
+						&nbsp;&nbsp;&lt;div&gt;<br/>
+						&nbsp;&nbsp;&nbsp;&nbsp;Your-Content.<br/>
+						&nbsp;&nbsp;&lt;/div&gt;<br/>
+						&lt;/div&gt;<br/>
+					</code>
 				</div>
 			</div>
 		</div>	<!-- end of:  magic-slider  -->
