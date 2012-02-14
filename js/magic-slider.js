@@ -30,6 +30,7 @@ $.fn.magicSlider = function(settings) {
 		dynamicTabsPosition: "top",
 		dynamicTabsContent: "title",		// "title" / "count"
 		externalTriggerSelector: "a.xtrig",
+		highlightExternalTrigger: false,
 		firstPanelToLoad: 1,
 		panelTitleSelector: "h2.title",
 		slideEaseDuration: 1000,
@@ -47,10 +48,13 @@ $.fn.magicSlider = function(settings) {
 
 		// If Headlineanimation wanted
 		if ( settings.changeSliderHeadline == true ){ var panelHeadlines = new Array(); };
+		
+		var panelsHeights = new Array();
 
 		// N E W .. no more need for panel-class
 		slider.children().each( function(index) {
 			$(this).addClass( sliderID + '_panel' );
+			panelsHeights[ index ] = $(this).height();
 			if ( settings.changeSliderHeadline == true ){
 				if ( $(this).find(settings.panelTitleSelector).length > 0 ){
 					panelHeadlines[ index ] = $(this).find(settings.panelTitleSelector).html(); 
@@ -59,6 +63,8 @@ $.fn.magicSlider = function(settings) {
 				};
 			};
 		});
+		
+		var biggestPanel = Array_max( panelsHeights );
 
 		// If we need arrows
 		if (settings.dynamicArrows) {
@@ -83,15 +89,12 @@ $.fn.magicSlider = function(settings) {
 			var panelHeight = slider.find('.' + sliderID + '_panel').height();
 			var panelContainerWidth = panelWidth;
 			var panelContaineroffset = new Array();
-			var panelsHeights = new Array();
 			var daHeight = 0;
 			slider.find('.' + sliderID + '_panel').each(function(index) {
 				panelContaineroffset[ index ] =  daHeight;
 				daHeight = daHeight + $(this).height();
-				panelsHeights[ index ] = $(this).height();
 			});
 			var panelContainerHeight = (settings.carousel) ? (daHeight + panelHeight) : daHeight;
-			var biggestPanel = Array_max( panelsHeights );
 			if (settings.autoHeight != true) {
 				daHeight = 0;
 				slider.find('.' + sliderID + '_panel').each(function(index) {
@@ -104,12 +107,12 @@ $.fn.magicSlider = function(settings) {
 		};
 
 		// Surround the collection of panel divs with a container div (wide enough for all panels to be lined up end-to-end)
-		$('.' + sliderID + '_panel', slider).wrapAll('<div class="' + sliderID + '_panel_container"></div>');
+		$('.' + sliderID + '_panel', slider).wrapAll('<div class="' + sliderID + '_panel_container panel-container"></div>');
 		// Specify the width of the container div (wide enough for all panels to be lined up end-to-end)
 		if (settings.slideDirection != "horizontal") {
-			$('.' + sliderID + '_panel_container', slider).css({ width: panelWidth, height: panelContainerHeight });
+			$('.' + sliderID + '_panel_container', slider).css({ height: panelContainerHeight });
 		} else {
-			$('.' + sliderID + '_panel_container', slider).css({ width: panelContainerWidth, height: panelHeight });
+			$('.' + sliderID + '_panel_container', slider).css({ width: panelContainerWidth });
 		};
 
 		// Initial Panel Load
@@ -217,6 +220,11 @@ $.fn.magicSlider = function(settings) {
 				$(this).bind("click", function() {
 					navClicks++;
 					targetPanel = parseInt($(this).attr("href").slice(1));
+					if ( settings.highlightExternalTrigger == true ) {
+						$('a[rel="' + sliderID + '"]').removeClass("current");
+						$('a[rel="' + sliderID + '"][href="#' + targetPanel +'"]').addClass("current");
+						// $(this).addClass("current");
+					};
 					offset = - (panelWidth*(targetPanel - 1));
 					alterPanelHeight(targetPanel - 1);
 					currentPanel = targetPanel;
@@ -249,9 +257,7 @@ $.fn.magicSlider = function(settings) {
 				slider.css({ height: panelsHeights[ currentPanel - 1 ] });
 			};
 		} else {
-			if (settings.slideDirection != "horizontal"){
-				slider.css({ height: panelsHeights[ currentPanel - 1 ] });
-			}
+			slider.css({ height: biggestPanel });
 		};
 
 		// Trigger autoSlide
@@ -298,10 +304,13 @@ $.fn.magicSlider = function(settings) {
 			if ( settings.changeSliderHeadline == true ){
 				$(settings.sliderHeadlineSelector).html( panelHeadlines[ targetPanelIndex - 1 ] );
 			};
+			if ( settings.highlightExternalTrigger == true ) {
+				$('a[rel="' + sliderID + '"]').removeClass("current");
+				$('a[rel="' + sliderID + '"][href="#' + targetPanelIndex +'"]').addClass("current"); // $(this).addClass("current");
+			};
 			slider.find('div.' + sliderID + '_panel_container div.' + sliderID + '_panel').removeClass('current');
 			slider.find('div.' + sliderID + '_panel_container div.' + sliderID + '_panel:eq('+ (targetPanelIndex - 1) + ')').addClass('current');
 		};
-
 
 		function doThePanelMove(targetPanelIndex) {
 			if (settings.slideDirection == "horizontal"){
@@ -318,7 +327,6 @@ $.fn.magicSlider = function(settings) {
 				);
 			}
 		};
-
 
 		function doTheDouble( clon ) {
 			if ( clon == 'last' ) {
