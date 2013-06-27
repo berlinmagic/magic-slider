@@ -38,13 +38,13 @@ $.fn.magicSlider = function(settings) {
 		slideDirection: "horizontal", // "horizontal" / "vertical"
 		carousel: false,
 		changeSliderHeadline: false,
-		sliderHeadlineSelector: "#magic_slider_head" 		// Selector for headline
+		sliderHeadlineSelector: "#magic_slider_head",	// Selector for headline
+		pauseOnMouseEnter: false   // affects autoSlide
 	}, settings);
 
 	return this.each(function(){
 
-		var 	slider 		= $(this),
-				sliderID 	= slider.attr('id');
+		var mouseEvent = false, slider = $(this), sliderID = slider.attr('id');
 
 		// If Headlineanimation wanted
 		if ( settings.changeSliderHeadline == true ){ var panelHeadlines = new Array(); };
@@ -114,7 +114,18 @@ $.fn.magicSlider = function(settings) {
 		} else {
 			$('.' + sliderID + '_panel_container', slider).css({ width: panelContainerWidth });
 		};
-
+		
+		// check if pauseOnMouseEnter is true, set mouseEvent Boolean
+		if (settings.pauseOnMouseEnter === true) {
+			$('.' + sliderID + '_panel_container', slider).mouseenter(function(){
+				mouseEvent = true;
+				//console.log("mouseenter detected");
+			}).mouseleave(function(){
+				//console.log("mouseleave detected");
+				mouseEvent = false;
+			});		
+		};
+		
 		// Initial Panel Load
 		if (settings.crossLinking && location.hash && parseInt(location.hash.slice(1)) <= panelCount) {
 			var currentPanel = parseInt(location.hash.slice(1));
@@ -274,17 +285,21 @@ $.fn.magicSlider = function(settings) {
 			};
 		};
 
-		function autoSlide() {
-			if (navClicks == 0 || !settings.autoSlideStopWhenClicked) {
-				if (currentPanel == panelCount) {
-					if(!settings.autoCycle)
-					return false;
-					currentPanel = 1;
-				} else {
-					currentPanel += 1;
+		function autoSlide() {	
+			if (!mouseEvent) {
+				if (navClicks == 0 || !settings.autoSlideStopWhenClicked) {
+					if (currentPanel == panelCount) {
+						if(!settings.autoCycle)
+						return false;
+						currentPanel = 1;
+					} else {
+						currentPanel += 1;
+					};
+					alterPanelHeight(currentPanel - 1);
+					moveToPanel(currentPanel);
+					setTimeout(autoSlide,settings.autoSlideInterval);
 				};
-				alterPanelHeight(currentPanel - 1);
-				moveToPanel(currentPanel);
+			} else {
 				setTimeout(autoSlide,settings.autoSlideInterval);
 			};
 		};
