@@ -39,6 +39,8 @@ $.fn.magicSlider = function(settings) {
 		carousel: false,
 		changeSliderHeadline: false,
 		sliderHeadlineSelector: "#magic_slider_head",	// Selector for headline
+		lightBoxOpenSelector: "lbOverlay",  // lightbox overlay div
+		observeLightBoxOpen: false,
 		pauseOnMouseEnter: false   // affects autoSlide
 	}, settings);
 
@@ -114,6 +116,19 @@ $.fn.magicSlider = function(settings) {
 		} else {
 			$('.' + sliderID + '_panel_container', slider).css({ width: panelContainerWidth });
 		};
+		
+		
+		// observe lightbox init to pause autoSlide
+		if (settings.observeLightBoxOpen === true) {
+			$('#' + settings.lightBoxOpenSelector).attrchange(function(attrName) {
+			var currentDisplay = $('#' + settings.lightBoxOpenSelector).css('display');
+			if ( currentDisplay === 'block') {
+					mouseEvent = true;
+				} else {
+					mouseEvent = false;
+				}
+			});
+		}
 		
 		// check if pauseOnMouseEnter is true, set mouseEvent Boolean
 		if (settings.pauseOnMouseEnter === true) {

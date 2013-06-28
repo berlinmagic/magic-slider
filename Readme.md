@@ -31,3 +31,9 @@ Thanks A lot!
 	
 
 for more info, look: [the github page](http://orangenwerk.github.com/magic-slider/)
+
+## more improvements
+
+* Added observe Lightbox(overlay) init to pause autoSlide
+* Added Mouseenter, Mouseleave to pause autoSlide
+
